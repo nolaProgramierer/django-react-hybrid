@@ -9,13 +9,13 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./piano/assets/piano/index.js":
-/*!*************************************!*\
-  !*** ./piano/assets/piano/index.js ***!
-  \*************************************/
+/***/ "./piano/assets/index.js":
+/*!*******************************!*\
+  !*** ./piano/assets/index.js ***!
+  \*******************************/
 /***/ (() => {
 
-eval("function component () {\n    const element = document.createElement('div');\n    element.innerHTML = \"Hello webpack\";\n    return element;\n}\ndocument.body.appendChild(component());\n\n//# sourceURL=webpack://django_hybrid/./piano/assets/piano/index.js?");
+eval("function component () {\n    const element = document.createElement('div');\n    element.innerHTML = \"Hello webpack\";\n    return element;\n}\ndocument.body.appendChild(component());\n\n//# sourceURL=webpack://django_hybrid/./piano/assets/index.js?");
 
 /***/ })
 
@@ -26,7 +26,7 @@ eval("function component () {\n    const element = document.createElement('div')
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
 /******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./piano/assets/piano/index.js"]();
+/******/ 	__webpack_modules__["./piano/assets/index.js"]();
 /******/ 	
 /******/ })()
 ;
