@@ -7,5 +7,15 @@ module.exports = {
         filename: 'index-bundle.js', 
         // path to Django static directory
         path: path.resolve(__dirname, './piano/static/piano')  
-    }
+    },
+    module: {
+        rules: [
+          {
+            test: /\.(js|jsx)$/,
+            exclude: /node_modules/,
+            loader: "babel-loader",
+            options: { presets: ["@babel/preset-env", "@babel/preset-react"] }
+          },
+        ]
+      }
 }
