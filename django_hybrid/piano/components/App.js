@@ -39,7 +39,6 @@ function App() {
 return (
         <div>
            <p>This is an import App component</p>
-
            <List persons={persons1} />
         </div>
     )

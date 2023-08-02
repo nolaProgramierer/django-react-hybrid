@@ -1,7 +1,8 @@
 const path = require('path');
 
 module.exports = {
-    entry: './piano/assets/piano/index.js', // path to input file
+    // path to input file
+    entry: './piano/assets/piano/index.js', 
     output: {
         // output bundle file name
         filename: 'index-bundle.js', 

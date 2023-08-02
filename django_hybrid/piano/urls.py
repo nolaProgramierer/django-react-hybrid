@@ -4,5 +4,7 @@ from .import views
 
 urlpatterns = [
     path("", views.index, name="index"),
+
+    # React views
     path("hello_webpack/", TemplateView.as_view(template_name='piano/hello_webpack.html')),
 ]
