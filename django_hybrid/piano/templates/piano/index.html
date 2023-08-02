@@ -1,6 +1,52 @@
 {% extends "piano/layout.html" %}
+{% load static %}
 
 {% block body %}
-<h2>React Django</h2>
-<a href="{% url 'hello_webpack' %}">To React being served from Django template</a>
+<h1>This is the piano app index page!</h1>
+<h2 style="color: red">React Django</h2>
+{% if message %}
+    <div>{{ message }}</div>
+{% endif %}
+
+<h3>Piano listing</h3>
+    <!--Creating a list of entries-->
+    {% for piano in pianos %}
+
+    <div class="card mb-3">
+        <a href="#">
+            <div class="row no-gutters">
+                {% if piano.imageUrl %}
+                    <div class="col-md-4">
+                        <img src="{{ piano.imageUrl }}" class="card-img" alt="{{ piano.title }}">
+                    </div>
+                    <div class="col-md-8">
+                {% else %}
+                    <div class="col-md-12">
+                {% endif %}
+                        <div class="card-body" data-piano="{{ piano.id }}">
+                            {% csrf_token %}
+                            
+                            <h5 class="card-title">
+                                <a href="#">{{ piano.brand }}</a>
+                            </h5>
+                            
+                            <p data-piano="{{ piano.id }} class="card-text"><strong>Price:</strong> ${{ piano.price }}</p>
+                           
+                            <p data-piano="{{ piano.id }} class="card-text">Size: {{ piano.size }} cm</p>
+                            
+                            <button data-piano="{{ piano.id }}" class="btn btn-info vote-btn" type="button">Vote</button>
+                            
+                            <p data-piano="{{ piano.id }}"class="card-text piano-votes" >Number of votes: {{piano.vote}}</p>
+                        </div>
+                    </div>
+                    <a class="piano_delete_link" data-piano="{{ piano.id }}" href="{% url 'delete_piano' piano.id %}">Delete piano</a>
+            </div>
+    </div>
+    {% empty %}
+       No pianos to list.
+    {% endfor %}
+<div>
+    <a href="{% url 'hello_webpack' %}">To React being served from Django template</a>
+</div>
+
 {% endblock %}
