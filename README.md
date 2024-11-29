@@ -30,7 +30,9 @@ Install React and Babel
 `npm install --save react react-dom`
 
 Create an *index.js* in your *front_end/piano_inventory* folder.  You can put a simple JS function there for the time being or if you have a React app, your root component that will be rendered.
+
 Next, create a *webpack.config.js* in the application root directory.
+
 Finally, add a *scripts* key to the *package.json* file as shown in the repo which will allow us to run webpack from the terminal.
 `"scripts": {
     ...
