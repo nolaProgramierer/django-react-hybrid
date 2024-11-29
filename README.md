@@ -10,7 +10,7 @@ You don't have to give up all the advantages of using a fully-featured framework
 
 The first step is to add some files and folders to our regular Django project structure. There are many ways to do this, but I've chosen to stick closely to the structure we've used in the course. It's intutive and clean.  
 
-This will not be a complete how-to as all the files necessary to run the are within the repo.  However in this READEME, I'll walk through the steps explaining what's in the relevant files.
+This will not be a complete how-to as all the files necessary to run the app are within the repo.  However in this README, I'll walk through the steps explaining what's in the relevant files.
 
 I've added the following in the application, *piano_inventory*, folder:
 1. a component folder: will contain my React components
