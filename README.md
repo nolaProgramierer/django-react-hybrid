@@ -58,7 +58,7 @@ Finally, on line 1 in the *piano_inventory/compoents/App.js* file, you can the u
 
 That route corresponds to a route in the Django *urls.py* which returns the *piano_list* view.
 
-Again, this README isn't meant to be a step-by-step tutorial, but a further explanation of the Section material and of the code posted in the repository.  Feel free to send me any questions you may have about the code or the implementation of this hybrid app.
+Again, this README isn't meant to be a step-by-step tutorial, but a further explanation of the Section material and of the code posted in the repository.  Feel free to send me any questions you may have about the code or the implementation of this hybrid app such as this one.
 
 
 
