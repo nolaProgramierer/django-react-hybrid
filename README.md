@@ -8,7 +8,7 @@ You don't have to give up all the advantages of using a fully-featured framework
 4. Babel, a compiler
 5. The Django Rest Framework to handle the serializations in our Django backend gracefully
 
-The frist step is to add some files and folders to our regular Django project structure. There are many ways to do this, but I've chosen to stick closely to the structure we've used in the course. It's intutive and clean.  
+The first step is to add some files and folders to our regular Django project structure. There are many ways to do this, but I've chosen to stick closely to the structure we've used in the course. It's intutive and clean.  
 
 This will not be a complete how-to as all the files necessary to run the are within the repo.  However in this READEME, I'll walk through the steps explaining what's in the relevant files.
 
