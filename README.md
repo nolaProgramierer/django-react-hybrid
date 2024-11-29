@@ -10,11 +10,11 @@ You don't have to give up all the advantages of using a fully-featured framework
 
 The first step is to add some files and folders to our regular Django project structure. There are many ways to do this, but I've chosen to stick closely to the structure we've used in the course. It's intutive and clean.  
 
-This will not be a complete how-to as all the files necessary to run the app are within the repo.  However in this README, I'll walk through the steps explaining what's in the relevant files.
+This will not be a complete how-to as all the files necessary to run the app are within the repo.  However in this README, I'll explain what's in the relevant files.
 
-I've added the following in the application, *piano_inventory*, folder:
-1. a component folder: will contain my React components
-2. a frontend/piano_inventory: will contain my source JS file
+I've added the following in the application folder, *piano_inventory*:
+1. a component folder: contains my React components
+2. a frontend/piano_inventory: contains my source React/JS file
 3. in the above folder an *index.js* file, which will be the root of my React app
 
 In the root directory of the project install webpack.
@@ -32,6 +32,10 @@ Install React and Babel
 Create an *index.js* in your *front_end/piano_inventory* folder.  You can put a simple JS function there for the time being or if you have a React app, your root component that will be rendered.
 Next, create a *webpack.config.js* in the application root directory.
 Finally, add a *scripts* key to the *package.json* file as shown in the repo which will allow us to run webpack from the terminal.
+`"scripts": {
+    ...
+    "dev": "webpack --mode development --watch"
+  },`
 
 In *webpack.config.js* there are 3 key:value pairs.  The 1st, *entry*, sets the location of the source JS files.  The 2nd, *output*, sets the filename of the bundled JS and the absolute path to the location.  The *module* key uses Babel's *env* and *react* presets to compile (transpile) the JS files.
 
