@@ -1,7 +1,7 @@
 # Django/React Hybrid App
 ## An App demonstrating CRUD operations on a Piano Inventory
 ### HES CSCI E-33a
-You don't have to give up all the advantages of using a fully-featured framework like Django in order to take advantage of React.  This application serves a React app as a static asset in a Django tmeplate.  In order to build such an app you'll need the following:
+You don't have to give up all the advantages of using a fully-featured framework like Django in order to take advantage of React.  This application serves a React app as a static asset in a Django template.  In order to build such an app you'll need the following:
 1. A functional Django project and app
 2. NPM, a package manager
 3. Webpack, a bundler
