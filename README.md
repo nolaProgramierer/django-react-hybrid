@@ -1,21 +1,21 @@
 # Django/React Hybrid App
 ## An App demonstrating CRUD operations on a Piano Inventory
 ### HES CSCI E-33a
-You don't have to give up all the advantages of using a fully-featured framework, like Django, in order to take advantage of the React.  This application serves a React app as a static asset served in a Django tmeplate.  In order to build such an app you'll need the following:
+You don't have to give up all the advantages of using a fully-featured framework, like Django, in order to take advantage of React.  This application serves a React app as a static asset in a Django tmeplate.  In order to build such an app you'll need the following:
 1. A functional Django project and app
 2. NPM, a package manager
 3. Webpack, a bundler
-4. Bable, a compiler
+4. Babel, a compiler
 5. The Django Rest Framework, to handle the serializations in our Django backend gracefully
 
-The frist step is to add some files ande folder to our regualr Django project structure. There are many ways to do this, but I've chosen to stick closely to the strucutre we've used in the course. It's intutive and clean.  
+The frist step is to add some files and folders to our regular Django project structure. There are many ways to do this, but I've chosen to stick closely to the strucutre we've used in the course. It's intutive and clean.  
 
-This will not be a complete how-to, as all the files necessary are within the repo.  However, in the READEME, I'll walk through the steps explaining what's in the repo.
+This will not be a complete how-to, as all the files necessary are within the repo.  However, in this READEME, I'll walk through the steps explaining what's in the repo.
 
-I've added the following in the application folder:
+I've added the following in the application, *piano_inventory*, folder:
 1. a component folder: will contain my React components
 2. a frontend/piano_inventory: will contain my source JS file
-3. in the above folder add a *index.js*, which will be the root of my React app
+3. in the above folder a *index.js*, which will be the root of my React app
 
 In the root directory of the project install webpack.
 
@@ -38,6 +38,13 @@ In *webpack.config.js* there are 3 key:value pairs.  The 1st, *entry*, sets the 
 Running
 `run npm dev` should execute the webpack script and , if no errors, place the bundled file in the *static/piano_inventory* folder.  Note that this is the same folder we've used throughout the semester for our static files.
 
+The React pipeline in Django is the follwoing:
+1) *front_end/piano_inventory/index.js* contains the root of the React app. You'll notice that the root is being assigned to a div, *js-framework-home*
+2) The bundler outputs the minified React file(s) in the *static/piano_inventory/indexBundle.js* file.
+3) In the *templates/piano_inventory/index_inventory.html* file the bundled JS file in step 2 is called as a script on line 17. Remember, that React is being served as a static asset.  this is really no different than calling any JS script you written in an external JS file.  The only difference being, its React JS.
+4) Notice the empty div in the template, mentioned in step 3, with the id *js-frameowkr-home*  That is where the bundled JS file is being inserted.
+5) When you go to that url, React will be running in that div
+    
 That's pretty much it as far as getting React/JS to render in a Django template.  What we have to do is now hook up our Django backend to the React front-end.
 
 Now, we need to install the Django Rest Framework
