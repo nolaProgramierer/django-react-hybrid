@@ -73,12 +73,4 @@ That route corresponds to a path in the Django *urls.py* which returns the *pian
 
 The *fetchData* function within the React *useEffect* hook is very similar, aside from the React state variables, to a browser's *fetch* utility.
 
-Again, this README isn't meant to be a step-by-step tutorial, but simply a further explanation of the Section material and of the code posted in this repository.  Feel free to email me any questions you may have about the code or the implementation of a hybrid app such as this one.
-
-
-
-
-
-
-
-
+Again, this README isn't meant to be a step-by-step tutorial, but simply a further explanation of the Section material and of the code posted in this repository.  Feel free to email me any questions you may have about the code or the implementation of a hybrid app such as this one.  You are also free to fork this repository and use it as a basis for your own work, should you desire.
