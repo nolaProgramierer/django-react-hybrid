@@ -59,7 +59,7 @@ This would probably be a good time to make a *serializers.py* file in your appli
 
 The Django Rest Framework documentation is excellent so I'm not going to duplicate it here, but I will point out the repo's files, liberally commented, that will connect with your React front-end.
 
-In the *serializers.py* file are what the Django Rest Framework needs to handle the serialization of the model objects defined in the *models.py* file.  We need a way to convert Django model objects to Python native data types and finally to JSON objects.
+In the *serializers.py* file is what the Django Rest Framework needs to handle the serialization of the model objects defined in the *models.py* file.  We need a way to convert Django model objects to Python native data types and finally to JSON objects.
 You'll notice in the *urls.py* file, lines 14-18, are the routes that the React front-end is calling.  They in turn call the appropriate views in *views.py*, similar to what we've done all semester, and return JSON responses to the React front-end.
 
 From what you've already done this semester, the code in in the *views.py* file, lines 88-147, shoudn't look too unfamiliar.  We're retrieving querysets or model instances, serializing/unserializing them, saving to the database, and returning a response to the front-end.  For more detail on the step-by-step implementation, consult the Django Rest Framework documentation.
