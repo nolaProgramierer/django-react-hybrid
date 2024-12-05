@@ -45,7 +45,7 @@ In the terminal `run npm dev` should execute the webpack script and if no errors
 
 The React pipeline in Django is the following:
 1) *front_end/piano_inventory/index.js* contains the root of the React app. You'll notice that the root is being assigned to a div, *js-framework-home*
-2) The bundler outputs the minified React file(s) to the *static/piano_inventory/indexBundle.js* file.
+2) The bundler outputs the minified React file(s) to the *static/piano_inventory/indexBundle.js* file. As defined in the *webpack_config* file.
 3) In the *templates/piano_inventory/index_inventory.html* file the bundled JS file in step 2 is called as a script on line 17. Remember, that React is being served as a static asset.  This is really no different than calling any JS script you've written in an external JS file.  The only difference being its React JS.
 4) Notice the empty div in the template, mentioned in step 3, with the id *js-framework-home*  That is where the bundled JS file is being inserted. Not entirely dissimilar from what you did in the Mail app.
 5) When you go to (http://127.0.0.1:8000/index_inventory) in the browser address bar, React should be running within that template.
