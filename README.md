@@ -43,7 +43,7 @@ In *webpack.config.js* there are 3 key:value pairs.  The 1st, *entry*, sets the 
 
 In the terminal `run npm dev` should execute the webpack script and if no errors, create and place the bundled JS file in the *static/piano_inventory* folder.  Note that this is the same folder we've used throughout the semester for our static files. JS and CSS.
 
-The React pipeline in Django is the follwoing:
+The React pipeline in Django is the following:
 1) *front_end/piano_inventory/index.js* contains the root of the React app. You'll notice that the root is being assigned to a div, *js-framework-home*
 2) The bundler outputs the minified React file(s) to the *static/piano_inventory/indexBundle.js* file.
 3) In the *templates/piano_inventory/index_inventory.html* file the bundled JS file in step 2 is called as a script on line 17. Remember, that React is being served as a static asset.  This is really no different than calling any JS script you've written in an external JS file.  The only difference being its React JS.
