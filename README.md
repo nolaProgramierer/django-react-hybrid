@@ -29,9 +29,9 @@ Install React and Babel
 `npm install — save-dev @babel/core @babel/preset-env @babel/preset-react`
 `npm install --save react react-dom`
 
-Create an *index.js* in your *front_end/piano_inventory* folder.  You can put a simple JS function there for the time being or if you have a React app, your root component that will be rendered.
+Create an *index.js* file in your *front_end/piano_inventory* folder.  You can put a simple JS function there for the time being or if you have a React app, your root component that will be rendered.
 
-Next, create a *webpack.config.js* in the application root directory.
+Next, create a *webpack.config.js* file in the application root directory.
 
 Finally, add a *scripts* key to the *package.json* file as shown in the repo which will allow us to run webpack from the terminal.
 `"scripts": {
@@ -43,7 +43,7 @@ In *webpack.config.js* there are 3 key:value pairs.  The 1st, *entry*, sets the 
 
 In the terminal `run npm dev` should execute the webpack script and if no errors, create and place the bundled JS file in the *static/piano_inventory* folder.  Note that this is the same folder we've used throughout the semester for our static files. JS and CSS.
 
-The React pipeline in Django is the following:
+The React pipeline in Django is as follows:
 1) *front_end/piano_inventory/index.js* contains the root of the React app. You'll notice that the root is being assigned to a div, *js-framework-home*
 2) The bundler outputs the minified React file(s) to the *static/piano_inventory/indexBundle.js* file. As defined in the *webpack_config* file.
 3) In the *templates/piano_inventory/index_inventory.html* file the bundled JS file in step 2 is called as a script on line 17. Remember, that React is being served as a static asset.  This is really no different than calling any JS script you've written in an external JS file.  The only difference being its React JS.
